@@ -56,7 +56,11 @@ static void InsertZeroBetweenParityElements(LinkedList<int> linkedList)
 		if (current.Value % 2 == 0 && current.Next.Value % 2 == 0)
 		{
 			linkedList.AddAfter(current, 0);
+			current = current.Next.Next; 
 		}
-		current = current.Next;
+		else
+		{
+			current = current.Next;
+		}
 	}
 }
